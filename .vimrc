@@ -36,6 +36,9 @@ Plugin 'vim-syntastic/syntastic'
 "emmet html5插件
 Plugin 'mattn/emmet-vim'
 
+"格式化代码,仅仅是框架，还要借助具体插件
+Plugin 'chiel92/vim-autoformat'
+
 call vundle#end()            " required
 " ==============================================================================
 " vundle命令
@@ -51,6 +54,11 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 let NERDTreeShowHidden = 1   "NERDTREE显示隐藏文件
 let NERDTreeShowLineNumbers=1   "显示行号
 " ===========================================================
+
+"解决格式化问题
+:set smartindent
+:filetype indent on
+
 set relativenumber 
 set number
 set ignorecase

@@ -49,7 +49,7 @@ call vundle#end()            " required
 
 " ==============================================================================
 "NERDTree 插件配置
-map tt :NERDTreeToggle<CR>
+noremap tt :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 let NERDTreeShowHidden = 1   "NERDTREE显示隐藏文件
 let NERDTreeShowLineNumbers=1   "显示行号
@@ -77,4 +77,10 @@ inoremap <C-h> <Left>
 inoremap <C-j> <Down>
 inoremap <C-k> <Up>
 inoremap <C-l> <Right>
+<<<<<<< Updated upstream
 inoremap <C-d> <DELETE>
+=======
+
+" 不进入插入模式加入空格(美化排版)
+noremap <space> i <ESC>
+>>>>>>> Stashed changes
